@@ -20,12 +20,12 @@
   {
     darwinConfigurations."itsaunixsystem" = nix-darwin.lib.darwinSystem {
       specialArgs = {
-	inherit self;
-	inherit inputs;
+        inherit self;
+        inherit inputs;
       };
       modules = [
-	./hosts/itsaunixsystem.nix
-	home-manager.darwinModules.home-manager
+        ./hosts/itsaunixsystem.nix
+        home-manager.darwinModules.home-manager
       ];
     };
   };

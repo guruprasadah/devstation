@@ -8,12 +8,12 @@
 
     settings = {
       user = {
-	name = "Guruprasad AH";
-	email = "guruprasadah08@gmail.com";
+        name = "Guruprasad AH";
+        email = "guruprasadah08@gmail.com";
       };
 
       push = {
-	autoSetupRemote = true;
+        autoSetupRemote = true;
       };
 
       init.defaultBranch = "main";

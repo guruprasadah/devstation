@@ -12,7 +12,6 @@
     opts = {
       number = true;
       relativenumber = true;
-      shiftwidth = 2;
 
       mouse = "a";
 
@@ -20,14 +19,19 @@
 
       list = true;
       listchars = {
-	tab = "» ";
-	trail = "·";
-	nbsp = "␣";
+        tab = "» ";
+        trail = "·";
+        nbsp = "␣";
       };
 
       inccommand = "split";
 
       confirm = true;
+
+      expandtab = true;
+      tabstop = 4;
+      shiftwidth = 4;
+      softtabstop = 4;
     };
 
     globals = {
@@ -37,12 +41,12 @@
 
     plugins = {
       mini-pairs = {
-	enable = true;
-	settings.modes = {
-	  command = true;
-	  insert = true;
-	  terminal = false;
-	};
+        enable = true;
+        settings.modes = {
+          command = true;
+          insert = true;
+          terminal = false;
+        };
       };
     };
   };
