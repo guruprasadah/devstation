@@ -12,6 +12,10 @@
 	email = "guruprasadah08@gmail.com";
       };
 
+      push = {
+	autoSetupRemote = true;
+      };
+
       init.defaultBranch = "main";
     };
   };
