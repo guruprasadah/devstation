@@ -7,6 +7,7 @@
     ../home/uv.nix
     ../home/vscode.nix
     ../home/stylix.nix
+    ../home/pandoc.nix
   ];
 
   home.username = "guruprasadah";
