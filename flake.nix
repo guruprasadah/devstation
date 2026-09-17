@@ -22,8 +22,6 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nixvim, stylix }:
   {
-    nixpkgs.config.allowUnfree = true;
-
     darwinConfigurations."itsaunixsystem" = nix-darwin.lib.darwinSystem {
       specialArgs = {
         inherit self;

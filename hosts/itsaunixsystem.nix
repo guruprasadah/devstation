@@ -1,6 +1,7 @@
 { self, inputs, ... }:
 {
   imports = [
+    ../modules/nixpkgs.nix
     ../modules/darwin.nix
   ];
   home-manager.useGlobalPkgs = true;
