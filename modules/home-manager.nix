@@ -4,6 +4,7 @@
   imports = [
     ../home/nixvim.nix
     ../home/git.nix
+    ../home/uv.nix
   ];
 
   home.username = "guruprasadah";
