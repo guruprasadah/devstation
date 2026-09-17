@@ -13,10 +13,15 @@
     };
     nixvim = {
       url = "github:nix-community/nixvim/nixos-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    stylix = {
+      url = "github:nix-community/stylix/release-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nixvim }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nixvim, stylix }:
   {
     darwinConfigurations."itsaunixsystem" = nix-darwin.lib.darwinSystem {
       specialArgs = {

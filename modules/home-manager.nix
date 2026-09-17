@@ -1,10 +1,12 @@
-{ pkgs, nv, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
     ../home/nixvim.nix
     ../home/git.nix
     ../home/uv.nix
+    ../home/vscode.nix
+    ../home/stylix.nix
   ];
 
   home.username = "guruprasadah";
