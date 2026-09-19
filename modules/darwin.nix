@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   environment.systemPackages = [
@@ -14,6 +14,8 @@
     home = "/Users/guruprasadah";
     shell = pkgs.zsh;
   };
+
+  system.primaryUser = "guruprasadah";
 
   system.stateVersion = 6;
 }
