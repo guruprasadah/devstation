@@ -1,3 +1,4 @@
+{ inputs, pkgs, ... }:
 {
   programs.pandoc = {
     enable = true;
@@ -7,8 +8,9 @@
     };
   };
   home.packages = with pkgs; [
-    (texlive.combined.scheme-medium.override {
-      withXeTeX = true;
+    (texlive.combine {
+      inherit (texlive) scheme-medium xetex;
+      # Add other texlive packages here if needed, e.g., fontspec, collection-fontsrecommended
     })
   ];
 }
