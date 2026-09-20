@@ -11,4 +11,6 @@
   system.configurationRevision =
     self.rev or self.dirtyRev or null;
   nixpkgs.hostPlatform = "aarch64-darwin";
+
+  system.defaults.controlcenter.BatteryShowPercentage = true;
 }

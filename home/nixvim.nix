@@ -39,6 +39,18 @@
       maplocalleader = " ";
     };
 
+    keymaps = [
+      {
+        mode = "n";
+        key = "<leader>e";
+        action = ":Ex<CR>";
+        options = {
+          silent = true;
+          desc = "Open netrw in current file's dir";
+        };
+      }
+    ];
+
     plugins = {
       mini-pairs = {
         enable = true;
