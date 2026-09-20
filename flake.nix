@@ -21,16 +21,20 @@
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nixvim, stylix }:
+  let
+    constants = import ./constants.nix;
+  in
   {
     darwinConfigurations."itsaunixsystem" = nix-darwin.lib.darwinSystem {
-      specialArgs = {
-        inherit self;
-        inherit inputs;
-      };
       modules = [
         ./hosts/itsaunixsystem.nix
         home-manager.darwinModules.home-manager
       ];
+      specialArgs = {
+        inherit self;
+        inherit inputs;
+        inherit constants;
+      };
     };
   };
 }

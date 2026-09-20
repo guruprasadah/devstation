@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, constants, ... }:
 
 {
   imports = [
@@ -8,7 +8,7 @@
   stylix = {
     enable = true;
 
-    image = ./wallpapers/supra_festival.jpeg;
+    image = constants.wallpaper;
     polarity = "dark";
   };
 }

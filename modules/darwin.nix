@@ -1,8 +1,9 @@
-{ pkgs, config, ... }:
+{ pkgs, config, constants, ... }:
 
 {
   environment.systemPackages = [
     pkgs.vim
+    pkgs.desktoppr
   ];
 
   nix.settings.experimental-features = [
@@ -18,4 +19,9 @@
   system.primaryUser = "guruprasadah";
 
   system.stateVersion = 6;
+
+  system.activationScripts.postActivation.text = ''
+    echo "Setting macOS wallpaper from Stylix..."
+    sudo -u ${constants.username} ${pkgs.desktoppr}/bin/desktoppr "${constants.wallpaper}"
+  '';
 }

@@ -8,6 +8,7 @@
     ../home/vscode.nix
     ../home/stylix.nix
     ../home/pandoc.nix
+    ../home/ghostty.nix
   ];
 
   home.username = "guruprasadah";
