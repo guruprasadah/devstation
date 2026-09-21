@@ -2,9 +2,12 @@
 
 {
   environment.systemPackages = [
+    pkgs.zsh
     pkgs.vim
     pkgs.desktoppr
   ];
+
+  programs.zsh.enable = true;
 
   nix.settings.experimental-features = [
     "nix-command"

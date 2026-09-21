@@ -15,5 +15,10 @@
   home.homeDirectory = "/Users/guruprasadah";
   home.packages = [ pkgs.ripgrep pkgs.htop ];
   home.stateVersion = "26.05";
+
+  programs.zsh.enable = true;
+  home.shellAliases = {
+    un = "uv run nvim .";
+  };
 }
 

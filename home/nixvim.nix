@@ -32,6 +32,8 @@
       tabstop = 4;
       shiftwidth = 4;
       softtabstop = 4;
+
+      clipboard = "unnamedplus";
     };
 
     globals = {
@@ -60,6 +62,43 @@
           terminal = false;
         };
       };
+
+      fidget.enable = true;
+
+      blink-cmp = {
+        enable = true;
+        settings = {
+          keymap.preset = "enter";
+          sources.default = [ "lsp" "path" "snippets" "buffer" ];
+        };
+      };
+
+      lspconfig.enable = true;
+
+      lsp-signature = {
+        enable = true;
+        autoLoad = true;
+      };
+    };
+
+    diagnostic = {
+      settings = {
+        virtual_text = true;
+        signs = true;
+        underline = true;
+      };
+    };
+
+    lsp = {
+      servers = {
+        nixd.enable = true;
+        pyright.enable = true;
+      };
+      onAttach = ''
+      if client.supports_method("textDocument/inlayHint") then
+        vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+      end
+    '';
     };
   };
 }
