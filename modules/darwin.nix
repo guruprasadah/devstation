@@ -7,6 +7,10 @@
     pkgs.desktoppr
   ];
 
+  environment.systemPath = [
+    "$HOME/.local/bin"
+  ];
+
   programs.zsh.enable = true;
 
   nix.settings.experimental-features = [
