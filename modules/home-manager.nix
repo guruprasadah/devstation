@@ -13,7 +13,19 @@
 
   home.username = "guruprasadah";
   home.homeDirectory = "/Users/guruprasadah";
-  home.packages = [ pkgs.ripgrep pkgs.htop ];
+
+  home.packages = [ pkgs.ripgrep
+                    pkgs.htop
+                    pkgs.nodejs
+                    pkgs.pnpm
+                  ];
+  home.sessionVariables = {
+    PNPM_HOME = "$HOME/.local/share/pnpm";
+  };
+  home.sessionPath = [
+    "$HOME/.local/share/pnpm"
+  ];
+
   home.stateVersion = "26.05";
 
   programs.zsh.enable = true;

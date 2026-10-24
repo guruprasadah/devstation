@@ -13,6 +13,24 @@
 
   programs.zsh.enable = true;
 
+  nix-homebrew = {
+    enable = true;
+    enableRosetta = false;
+    user = constants.username;
+  };
+
+  homebrew = {
+    enable = true;
+    brews = [
+      "cloudflared"
+    ];
+    onActivation = {
+      autoUpdate = true;
+      upgrade = true;
+      cleanup = "none";
+    };
+  };
+
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -31,4 +49,5 @@
     echo "Setting macOS wallpaper from Stylix..."
     sudo -u ${constants.username} ${pkgs.desktoppr}/bin/desktoppr "${constants.wallpaper}"
   '';
+
 }

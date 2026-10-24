@@ -79,6 +79,8 @@
         enable = true;
         autoLoad = true;
       };
+
+      bullets.enable = true;
     };
 
     diagnostic = {

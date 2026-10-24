@@ -18,9 +18,12 @@
       url = "github:nix-community/stylix/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-homebrew = {
+      url = "github:zhaofengli/nix-homebrew";
+    };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nixvim, stylix }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nixvim, stylix, nix-homebrew }:
   let
     constants = import ./constants.nix;
   in
